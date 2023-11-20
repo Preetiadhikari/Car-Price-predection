@@ -70,7 +70,20 @@ lets examine price based on car length,width,height by using scatterplot. Here s
 Likewise, we can visualize  compressionratio ,horseratio , peakrpm using scatterplot.
 
 ## Data preprocessing
-In this section, i create new dataframe with selected feature
+In this section, i create new dataframe with selected feature . THen , I used a standardscaler()  function along with fit_transform() function to transform and standardize the data values into a 
+standard format.
+![App Screenshot](https://i.snipboard.io/bABtVY.jpg)
+
+
+## MODEL PERFORMANCE
+
+we will focus our attention on the performance of various models on the test data. Firstly we split the data into train and test data and  with the help of train_test_split method we train and test the data.
+I used a linear regression model at first to fit and predict the train and test data which result score 84% accuarcy.
+Again, i used gridsearchCV to check which model is best among (linear regression ,lasso ,decision tree regressor) and here is result:
+![App Screenshot](https://i.snipboard.io/uKCdUk.jpg)
+
+At last i create a pickle file which provide a way to serialize and deserialize trained model where i can resuse the model for making prediction on new data ,without having retrain the model from the strach. whereas , i also create json file which provide a convenient way to store and exchange data.
+
 
 
 
